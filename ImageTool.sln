@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTool", "WindowsFormsApp1\ImageTool.csproj", "{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Debug|x86.Build.0 = Debug|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|x64.Build.0 = Release|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6A597A1-EF52-496B-BBAB-FD2DEF7F4D6D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B5A133C-5F34-4BDE-B65F-D6DA7E2C2BC1}
+	EndGlobalSection
+EndGlobal

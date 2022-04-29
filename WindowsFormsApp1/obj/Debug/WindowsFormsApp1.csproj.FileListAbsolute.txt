@@ -1,0 +1,78 @@
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\15947\Desktop\研究生\0313\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\15947\Desktop\研究生\程序\cwb\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\SZH\opencv\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\WindowsFormsApp1 - (1)\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\second_10.27-\TestUI\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Image_Form.resources
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControl.resources
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\SZH\opencv\third_11.22-12.13\ImageTool_old\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ImageInfoHandle.resources
