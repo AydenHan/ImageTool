@@ -1,0 +1,10 @@
+E:\ImageTool\ImageTool\WindowsFormsApp1\bin\Release\ImageTool.exe.config
+E:\ImageTool\ImageTool\WindowsFormsApp1\bin\Release\ImageTool.exe
+E:\ImageTool\ImageTool\WindowsFormsApp1\bin\Release\ImageTool.pdb
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.csprojResolveAssemblyReference.cache
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.Image_Form.resources
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.ImageInfoHandle.resources
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.Properties.Resources.resources
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.csproj.GenerateResource.Cache
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.exe
+E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Release\ImageTool.pdb

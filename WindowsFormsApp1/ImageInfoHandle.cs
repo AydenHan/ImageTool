@@ -13,6 +13,8 @@ namespace ImageTool
         Regex isNumber = new Regex("^[-]?[\\d]+$");//^[0-9]*$
         Regex isPositiveNumber = new Regex("^[\\d]+$");
 
+        public TabPage curTab;
+
         private float[] Red = { 1, 0, 0};
         private float[] Green = { 0, 1, 0 };
         private float[] Blue = { 0, 0, 1 };
@@ -31,14 +33,24 @@ namespace ImageTool
         private void InitUI()
         {
             comboBox_OutputChannel.SelectedIndex = 0;
+            cb_PixNum.SelectedIndex = 0;
+            curTab = tabPage_BrightAndContrast;
         }
 
         private void tabControl_ImageInfoHandle_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl_ImageInfoHandle.SelectedIndex == 2) {
+            if (tabControl_Main.SelectedIndex == 2) {
                 correctThreshold?.Invoke(127);
             } else {
                 backToPrimary?.Invoke();
+            }
+            curTab = (TabPage)tabControl_Main.Controls[tabControl_Main.SelectedIndex];
+        }
+
+        public void tabPageBanner(int[] index, bool ban)
+        {
+            for (int i = 0; i < index.Length; i++) {
+                tabControl_Main.Controls[index[i]].Enabled = ban;
             }
         }
 
@@ -204,14 +216,22 @@ namespace ImageTool
 
         #endregion
 
-        #region 反相
+        #region 功能函数
+        // 反相
         public event ContrastImageHandler correctContrastImage;
         public delegate void ContrastImageHandler();
         private void button_ContrastImage_Click(object sender, EventArgs e)
         {
             correctContrastImage?.Invoke();
         }
-
+        // 行/列像素数统计
+        public event DirectPixNumHandler GetDirectPixNum;
+        public delegate void DirectPixNumHandler(bool isX, int pixel);
+        private void button_PixNum_Click(object sender, EventArgs e)
+        {
+            int val = int.Parse(tb_PixNum.Text);
+            GetDirectPixNum?.Invoke(cb_PixNum.SelectedIndex == 0, val);
+        }
         #endregion
 
         #region 通道混合器
@@ -423,21 +443,19 @@ namespace ImageTool
         #endregion
 
         #region HSV过滤
-        public event UpdateHSVHandler updateHSVInfo;
-        public delegate void UpdateHSVHandler(float lowH, float highH, float lowS, float highS, float lowV, float highV);
         public event HSVFilterHandler correctHSV;
         public delegate void HSVFilterHandler(float hl, float h, float sl, float s, float vl, float v);
         public event BtnSetHSVHandler SetHSV_Click;
         public delegate void BtnSetHSVHandler(float hl, float h, float sl, float s, float vl, float v);
         private void trackBar_Hl_Scroll(object sender, EventArgs e)
         {
-            if (trackBar_Hl.Value > trackBar_H.Value)
-                trackBar_Hl.Value = trackBar_H.Value - 1;
+            //if (trackBar_Hl.Value > trackBar_H.Value)
+            //    trackBar_Hl.Value = trackBar_H.Value - 1;
         }
         private void trackBar_H_Scroll(object sender, EventArgs e)
         {
-            if (trackBar_H.Value < trackBar_Hl.Value)
-                trackBar_H.Value = trackBar_Hl.Value + 1;
+            //if (trackBar_H.Value < trackBar_Hl.Value)
+            //    trackBar_H.Value = trackBar_Hl.Value + 1;
         }
         private void trackBar_Sl_Scroll(object sender, EventArgs e)
         {
@@ -461,7 +479,7 @@ namespace ImageTool
                 trackBar_V.Value = trackBar_Vl.Value + 1;
         }
 
-        private void trackBar_Hl_ValueChanged(object sender, EventArgs e)
+        private void updateHSV()
         {
             float h = trackBar_H.Value / 1000.0f * 360;
             float s = trackBar_S.Value / 1000.0f;
@@ -469,63 +487,38 @@ namespace ImageTool
             float hl = trackBar_Hl.Value / 1000.0f * 360;
             float sl = trackBar_Sl.Value / 1000.0f;
             float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
+            
             correctHSV?.Invoke(hl, h, sl, s, vl, v);
+        }
+        private void trackBar_Hl_ValueChanged(object sender, EventArgs e)
+        {
+            updateHSV();
+            lbl_Hl.Text = ((int)(trackBar_Hl.Value / 1000.0f * 360)).ToString();
         }
         private void trackBar_H_ValueChanged(object sender, EventArgs e)
         {
-            float h = trackBar_H.Value / 1000.0f * 360;
-            float s = trackBar_S.Value / 1000.0f;
-            float v = trackBar_V.Value / 1000.0f;
-            float hl = trackBar_Hl.Value / 1000.0f * 360;
-            float sl = trackBar_Sl.Value / 1000.0f;
-            float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
-            correctHSV?.Invoke(hl, h, sl, s, vl, v);
+            updateHSV();
+            lbl_H.Text = ((int)(trackBar_H.Value / 1000.0f * 360)).ToString();
         }
         private void trackBar_Sl_ValueChanged(object sender, EventArgs e)
         {
-            float h = trackBar_H.Value / 1000.0f * 360;
-            float s = trackBar_S.Value / 1000.0f;
-            float v = trackBar_V.Value / 1000.0f;
-            float hl = trackBar_Hl.Value / 1000.0f * 360;
-            float sl = trackBar_Sl.Value / 1000.0f;
-            float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
-            correctHSV?.Invoke(hl, h, sl, s, vl, v);
+            updateHSV();
+            lbl_Sl.Text = (trackBar_Sl.Value / 1000.0f).ToString();
         }
         private void trackBar_S_ValueChanged(object sender, EventArgs e)
         {
-            float h = trackBar_H.Value / 1000.0f * 360;
-            float s = trackBar_S.Value / 1000.0f;
-            float v = trackBar_V.Value / 1000.0f;
-            float hl = trackBar_Hl.Value / 1000.0f * 360;
-            float sl = trackBar_Sl.Value / 1000.0f;
-            float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
-            correctHSV?.Invoke(hl, h, sl, s, vl, v);
+            updateHSV();
+            lbl_S.Text = (trackBar_S.Value / 1000.0f).ToString();
         }
         private void trackBar_Vl_ValueChanged(object sender, EventArgs e)
         {
-            float h = trackBar_H.Value / 1000.0f * 360;
-            float s = trackBar_S.Value / 1000.0f;
-            float v = trackBar_V.Value / 1000.0f;
-            float hl = trackBar_Hl.Value / 1000.0f * 360;
-            float sl = trackBar_Sl.Value / 1000.0f;
-            float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
-            correctHSV?.Invoke(hl, h, sl, s, vl, v);
+            updateHSV();
+            lbl_Vl.Text = (trackBar_Vl.Value / 1000.0f).ToString();
         }
         private void trackBar_V_ValueChanged(object sender, EventArgs e)
         {
-            float h = trackBar_H.Value / 1000.0f * 360;
-            float s = trackBar_S.Value / 1000.0f;
-            float v = trackBar_V.Value / 1000.0f;
-            float hl = trackBar_Hl.Value / 1000.0f * 360;
-            float sl = trackBar_Sl.Value / 1000.0f;
-            float vl = trackBar_Vl.Value / 1000.0f;
-            updateHSVInfo?.Invoke(hl, h, sl, s, vl, v);
-            correctHSV?.Invoke(hl, h, sl, s, vl, v);
+            updateHSV();
+            lbl_V.Text = (trackBar_V.Value / 1000.0f).ToString();
         }
 
         private void button_ResetHSV_Click(object sender, EventArgs e)
@@ -562,6 +555,7 @@ namespace ImageTool
         // 重写关闭事件，防止窗体对象被释放
         public event PrimaryHandler backToPrimary;
         public delegate void PrimaryHandler();
+
         private void ImageInfoHandle_FormClosing(object sender, FormClosingEventArgs e)
         {
             textBox_Bright.Text = 0.ToString();
@@ -586,7 +580,6 @@ namespace ImageTool
             e.Cancel = true;
             Hide();
         }
-
 
     }
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Collections.Generic;
 
 namespace ImageTool
 {
-    public class SmallFunction
+    public class FuncDef
     {
         public static void Delay(int milliSecond)
         {
@@ -23,25 +24,63 @@ namespace ImageTool
                 return true;
             return false;
         }
+        public static bool Collide(Point pt, Rectangle rect)
+        {
+            if (pt.X > rect.Left && pt.X < rect.Right && pt.Y > rect.Top && pt.Y < rect.Bottom)
+                return true;
+            return false;
+        }
+        public static bool Collide(Point pt, Rectangle rect, Point shift)
+        {
+            if (pt.X > rect.Left + shift.X && pt.X < rect.Right + shift.X 
+                    && pt.Y > rect.Top + shift.Y && pt.Y < rect.Bottom + shift.Y)
+                return true;
+            return false;
+        }
 
         public static string GetFolderPath()
         {
             try {
-                string folder = Path.Combine(Application.UserAppDataPath, "Image");
-                Console.WriteLine(Application.UserAppDataPath);
+                string folder = Path.Combine(Application.StartupPath, "Image/");
+                Console.WriteLine(Application.StartupPath);
                 if (!Directory.Exists(folder))
                     Directory.CreateDirectory(folder);
                 return folder;
             }
-            catch (Exception) {
-                throw;
-            }
-            
+            catch (Exception) { throw; }
+        }
+
+        public static string OpenFile()
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            DialogResult rst = file.ShowDialog();
+            if ((int)rst != 1) return "";
+
+            return file.FileName;
         }
     }
 
     public class ControlHelper
     {
+        public static void SwapLocation(Control c1, Control c2)
+        {
+            Point tmp = c1.Location;
+            c1.Location = c2.Location;
+            c2.Location = tmp;
+        }
+
+        public static void SupplementLocation(Control.ControlCollection set, int del_idx)
+        {
+            int i = 0;
+            int shift = (set[set.Count - 1].Location.Y - set[0].Location.Y) / set.Count;
+            foreach (Control c in set) {
+                if (i >= del_idx) {
+                    c.Location = new Point(c.Location.X, c.Location.Y - shift);
+                }
+                i++;
+            }
+        }
+
         public static Label GetSpecifiedLabel(Panel parent, int Positon)
         {
             return ((Label)parent.Controls.Find("label" + Positon.ToString(), true)[0]);
@@ -83,6 +122,20 @@ namespace ImageTool
                 data[i - 1] = temp;
             }
             return data;
+        }
+
+        public static void MoveList<T>(ref List<T> list, int index, int target)
+        {
+            var tmp = list[index];
+            list.RemoveAt(index);
+            list.Insert(target, tmp);
+        }
+
+        public static void SwapList<T>(ref List<T> list, int index1, int index2)
+        {
+            var tmp = list[index1];
+            list[index1] = list[index2];
+            list[index2] = tmp;
         }
 
         public static Byte[] GetBytes(short value)
@@ -208,6 +261,7 @@ namespace ImageTool
             Bitmap myBmp = null;
             if (channel == 1)
             {
+                /*
                 myBmp = new Bitmap(width, height, PixelFormat.Format8bppIndexed);
                 BitmapData bmpdata = myBmp.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, myBmp.PixelFormat);
                 IntPtr ptr = bmpdata.Scan0;
@@ -226,13 +280,36 @@ namespace ImageTool
                 System.Runtime.InteropServices.Marshal.Copy(gray, 0, ptr, gray.Count());
                 myBmp.UnlockBits(bmpdata);
 
-                myBmp.Palette = grayPalette;
+                myBmp.Palette = grayPalette; 
+                */
+                myBmp = new Bitmap(width, height, PixelFormat.Format24bppRgb);
+                BitmapData bmpdata = myBmp.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, myBmp.PixelFormat);
+
+                int stride = bmpdata.Stride;
+                int offset = stride - width * 3;
+                IntPtr ptr = bmpdata.Scan0;
+                int scanBytes = stride * height;
+                int posScan = 0, posReal = 0;
+                byte[] pixelVaues = new byte[scanBytes];
+                for (int i = 0; i < height; i++)
+                {
+                    for (int j = 0; j < width; j++)
+                    {
+                        pixelVaues[posScan + 0] = rawValues[posReal];
+                        pixelVaues[posScan + 1] = rawValues[posReal];
+                        pixelVaues[posScan + 2] = rawValues[posReal++];
+                        posScan += 3;
+                    }
+                    posScan += offset;
+                }
+                System.Runtime.InteropServices.Marshal.Copy(pixelVaues, 0, ptr, scanBytes);
+                myBmp.UnlockBits(bmpdata);
             }
             else if (channel == 3)
             {
                 myBmp = new Bitmap(width, height, PixelFormat.Format24bppRgb);
                 BitmapData bmpdata = myBmp.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, myBmp.PixelFormat);
-                ///*
+
                 int stride = bmpdata.Stride;
                 int offset = stride - width * 3;
                 IntPtr ptr = bmpdata.Scan0;

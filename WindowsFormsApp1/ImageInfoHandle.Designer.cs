@@ -27,11 +27,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel_Main = new System.Windows.Forms.Panel();
             this.button_Save = new System.Windows.Forms.Button();
-            this.tabControl_ImageInfoHandle = new System.Windows.Forms.TabControl();
+            this.tabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage_BrightAndContrast = new System.Windows.Forms.TabPage();
             this.trackBar_Contrast = new System.Windows.Forms.TrackBar();
             this.textBox_Contrast = new System.Windows.Forms.TextBox();
@@ -39,7 +39,7 @@
             this.textBox_Bright = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage_HSV = new System.Windows.Forms.TabPage();
+            this.tabPage_HSL = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox_Hue = new System.Windows.Forms.TextBox();
             this.trackBar_Hue = new System.Windows.Forms.TrackBar();
@@ -54,7 +54,7 @@
             this.trackBar_Threshold = new System.Windows.Forms.TrackBar();
             this.textBox_Threshold = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage_ContrastImage = new System.Windows.Forms.TabPage();
+            this.tabPage_Funcs = new System.Windows.Forms.TabPage();
             this.button_ContrastImage = new System.Windows.Forms.Button();
             this.tabPage_ChannelCommingler = new System.Windows.Forms.TabPage();
             this.checkBox_SingleColor = new System.Windows.Forms.CheckBox();
@@ -78,6 +78,12 @@
             this.textBox_Green = new System.Windows.Forms.TextBox();
             this.textBox_Red = new System.Windows.Forms.TextBox();
             this.tabPage_HSVFilter = new System.Windows.Forms.TabPage();
+            this.lbl_V = new System.Windows.Forms.Label();
+            this.lbl_S = new System.Windows.Forms.Label();
+            this.lbl_H = new System.Windows.Forms.Label();
+            this.lbl_Vl = new System.Windows.Forms.Label();
+            this.lbl_Sl = new System.Windows.Forms.Label();
+            this.lbl_Hl = new System.Windows.Forms.Label();
             this.button_SetHSV = new System.Windows.Forms.Button();
             this.button_ResetHSV = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -92,19 +98,24 @@
             this.trackBar_V = new System.Windows.Forms.TrackBar();
             this.trackBar_S = new System.Windows.Forms.TrackBar();
             this.trackBar_H = new System.Windows.Forms.TrackBar();
+            this.button_PixNum = new System.Windows.Forms.Button();
+            this.cb_PixNum = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tb_PixNum = new System.Windows.Forms.TextBox();
             this.panel_Main.SuspendLayout();
-            this.tabControl_ImageInfoHandle.SuspendLayout();
+            this.tabControl_Main.SuspendLayout();
             this.tabPage_BrightAndContrast.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Contrast)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Bright)).BeginInit();
-            this.tabPage_HSV.SuspendLayout();
+            this.tabPage_HSL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Hue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Saturation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Lightness)).BeginInit();
             this.tabPage_Threshold.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Threshold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Threshold)).BeginInit();
-            this.tabPage_ContrastImage.SuspendLayout();
+            this.tabPage_Funcs.SuspendLayout();
             this.tabPage_ChannelCommingler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Const)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Blue)).BeginInit();
@@ -118,13 +129,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_V)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_S)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_H)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Main
             // 
             this.panel_Main.BackColor = System.Drawing.SystemColors.Control;
             this.panel_Main.Controls.Add(this.button_Save);
-            this.panel_Main.Controls.Add(this.tabControl_ImageInfoHandle);
+            this.panel_Main.Controls.Add(this.tabControl_Main);
             this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main.Location = new System.Drawing.Point(0, 0);
             this.panel_Main.Name = "panel_Main";
@@ -141,20 +154,20 @@
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
-            // tabControl_ImageInfoHandle
+            // tabControl_Main
             // 
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_BrightAndContrast);
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_HSV);
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_Threshold);
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_ContrastImage);
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_ChannelCommingler);
-            this.tabControl_ImageInfoHandle.Controls.Add(this.tabPage_HSVFilter);
-            this.tabControl_ImageInfoHandle.Location = new System.Drawing.Point(3, 3);
-            this.tabControl_ImageInfoHandle.Name = "tabControl_ImageInfoHandle";
-            this.tabControl_ImageInfoHandle.SelectedIndex = 0;
-            this.tabControl_ImageInfoHandle.Size = new System.Drawing.Size(408, 263);
-            this.tabControl_ImageInfoHandle.TabIndex = 0;
-            this.tabControl_ImageInfoHandle.SelectedIndexChanged += new System.EventHandler(this.tabControl_ImageInfoHandle_SelectedIndexChanged);
+            this.tabControl_Main.Controls.Add(this.tabPage_BrightAndContrast);
+            this.tabControl_Main.Controls.Add(this.tabPage_HSL);
+            this.tabControl_Main.Controls.Add(this.tabPage_Threshold);
+            this.tabControl_Main.Controls.Add(this.tabPage_ChannelCommingler);
+            this.tabControl_Main.Controls.Add(this.tabPage_HSVFilter);
+            this.tabControl_Main.Controls.Add(this.tabPage_Funcs);
+            this.tabControl_Main.Location = new System.Drawing.Point(3, 3);
+            this.tabControl_Main.Name = "tabControl_Main";
+            this.tabControl_Main.SelectedIndex = 0;
+            this.tabControl_Main.Size = new System.Drawing.Size(408, 263);
+            this.tabControl_Main.TabIndex = 0;
+            this.tabControl_Main.SelectedIndexChanged += new System.EventHandler(this.tabControl_ImageInfoHandle_SelectedIndexChanged);
             // 
             // tabPage_BrightAndContrast
             // 
@@ -234,24 +247,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "亮度(B):";
             // 
-            // tabPage_HSV
+            // tabPage_HSL
             // 
-            this.tabPage_HSV.Controls.Add(this.label13);
-            this.tabPage_HSV.Controls.Add(this.textBox_Hue);
-            this.tabPage_HSV.Controls.Add(this.trackBar_Hue);
-            this.tabPage_HSV.Controls.Add(this.textBox_Saturation);
-            this.tabPage_HSV.Controls.Add(this.label14);
-            this.tabPage_HSV.Controls.Add(this.trackBar_Saturation);
-            this.tabPage_HSV.Controls.Add(this.label15);
-            this.tabPage_HSV.Controls.Add(this.textBox_Lightness);
-            this.tabPage_HSV.Controls.Add(this.trackBar_Lightness);
-            this.tabPage_HSV.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_HSV.Name = "tabPage_HSV";
-            this.tabPage_HSV.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_HSV.Size = new System.Drawing.Size(400, 237);
-            this.tabPage_HSV.TabIndex = 1;
-            this.tabPage_HSV.Text = "色相/饱和度";
-            this.tabPage_HSV.UseVisualStyleBackColor = true;
+            this.tabPage_HSL.Controls.Add(this.label13);
+            this.tabPage_HSL.Controls.Add(this.textBox_Hue);
+            this.tabPage_HSL.Controls.Add(this.trackBar_Hue);
+            this.tabPage_HSL.Controls.Add(this.textBox_Saturation);
+            this.tabPage_HSL.Controls.Add(this.label14);
+            this.tabPage_HSL.Controls.Add(this.trackBar_Saturation);
+            this.tabPage_HSL.Controls.Add(this.label15);
+            this.tabPage_HSL.Controls.Add(this.textBox_Lightness);
+            this.tabPage_HSL.Controls.Add(this.trackBar_Lightness);
+            this.tabPage_HSL.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_HSL.Name = "tabPage_HSL";
+            this.tabPage_HSL.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_HSL.Size = new System.Drawing.Size(400, 237);
+            this.tabPage_HSL.TabIndex = 1;
+            this.tabPage_HSL.Text = "色相/饱和度";
+            this.tabPage_HSL.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -362,31 +375,31 @@
             // 
             // chart_Threshold
             // 
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisX.MajorTickMark.Enabled = false;
-            chartArea1.AxisX.Maximum = 255D;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
-            chartArea1.AxisX2.MajorGrid.Enabled = false;
-            chartArea1.AxisX2.MajorTickMark.Enabled = false;
-            chartArea1.AxisY.LabelStyle.Enabled = false;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.AxisY.MajorTickMark.Enabled = false;
-            chartArea1.AxisY.Maximum = 2500D;
-            chartArea1.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea1.AxisY2.MajorGrid.Enabled = false;
-            chartArea1.AxisY2.MajorTickMark.Enabled = false;
-            chartArea1.AxisY2.Maximum = 2500D;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderWidth = 5;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Threshold.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.LabelStyle.Enabled = false;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.MajorTickMark.Enabled = false;
+            chartArea3.AxisX.Maximum = 255D;
+            chartArea3.AxisX.Minimum = 0D;
+            chartArea3.AxisX2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea3.AxisX2.MajorGrid.Enabled = false;
+            chartArea3.AxisX2.MajorTickMark.Enabled = false;
+            chartArea3.AxisY.LabelStyle.Enabled = false;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.MajorTickMark.Enabled = false;
+            chartArea3.AxisY.Maximum = 2500D;
+            chartArea3.AxisY2.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea3.AxisY2.MajorGrid.Enabled = false;
+            chartArea3.AxisY2.MajorTickMark.Enabled = false;
+            chartArea3.AxisY2.Maximum = 2500D;
+            chartArea3.BorderColor = System.Drawing.Color.Transparent;
+            chartArea3.BorderWidth = 5;
+            chartArea3.Name = "ChartArea1";
+            this.chart_Threshold.ChartAreas.Add(chartArea3);
             this.chart_Threshold.Location = new System.Drawing.Point(15, 47);
             this.chart_Threshold.Name = "chart_Threshold";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.chart_Threshold.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "Series1";
+            this.chart_Threshold.Series.Add(series3);
             this.chart_Threshold.Size = new System.Drawing.Size(257, 108);
             this.chart_Threshold.TabIndex = 7;
             this.chart_Threshold.Text = "chart1";
@@ -422,20 +435,21 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "阈值(T):";
             // 
-            // tabPage_ContrastImage
+            // tabPage_Funcs
             // 
-            this.tabPage_ContrastImage.Controls.Add(this.button_ContrastImage);
-            this.tabPage_ContrastImage.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_ContrastImage.Name = "tabPage_ContrastImage";
-            this.tabPage_ContrastImage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ContrastImage.Size = new System.Drawing.Size(400, 237);
-            this.tabPage_ContrastImage.TabIndex = 3;
-            this.tabPage_ContrastImage.Text = "反相";
-            this.tabPage_ContrastImage.UseVisualStyleBackColor = true;
+            this.tabPage_Funcs.Controls.Add(this.groupBox3);
+            this.tabPage_Funcs.Controls.Add(this.groupBox2);
+            this.tabPage_Funcs.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Funcs.Name = "tabPage_Funcs";
+            this.tabPage_Funcs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Funcs.Size = new System.Drawing.Size(400, 237);
+            this.tabPage_Funcs.TabIndex = 3;
+            this.tabPage_Funcs.Text = "功能函数";
+            this.tabPage_Funcs.UseVisualStyleBackColor = true;
             // 
             // button_ContrastImage
             // 
-            this.button_ContrastImage.Location = new System.Drawing.Point(20, 25);
+            this.button_ContrastImage.Location = new System.Drawing.Point(6, 20);
             this.button_ContrastImage.Name = "button_ContrastImage";
             this.button_ContrastImage.Size = new System.Drawing.Size(75, 23);
             this.button_ContrastImage.TabIndex = 0;
@@ -683,6 +697,12 @@
             // 
             // tabPage_HSVFilter
             // 
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_V);
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_S);
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_H);
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_Vl);
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_Sl);
+            this.tabPage_HSVFilter.Controls.Add(this.lbl_Hl);
             this.tabPage_HSVFilter.Controls.Add(this.button_SetHSV);
             this.tabPage_HSVFilter.Controls.Add(this.button_ResetHSV);
             this.tabPage_HSVFilter.Controls.Add(this.label28);
@@ -704,6 +724,66 @@
             this.tabPage_HSVFilter.TabIndex = 5;
             this.tabPage_HSVFilter.Text = "HSV过滤";
             this.tabPage_HSVFilter.UseVisualStyleBackColor = true;
+            // 
+            // lbl_V
+            // 
+            this.lbl_V.AutoSize = true;
+            this.lbl_V.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_V.Location = new System.Drawing.Point(347, 149);
+            this.lbl_V.Name = "lbl_V";
+            this.lbl_V.Size = new System.Drawing.Size(17, 19);
+            this.lbl_V.TabIndex = 96;
+            this.lbl_V.Text = "1";
+            // 
+            // lbl_S
+            // 
+            this.lbl_S.AutoSize = true;
+            this.lbl_S.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_S.Location = new System.Drawing.Point(347, 98);
+            this.lbl_S.Name = "lbl_S";
+            this.lbl_S.Size = new System.Drawing.Size(17, 19);
+            this.lbl_S.TabIndex = 95;
+            this.lbl_S.Text = "1";
+            // 
+            // lbl_H
+            // 
+            this.lbl_H.AutoSize = true;
+            this.lbl_H.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_H.Location = new System.Drawing.Point(347, 46);
+            this.lbl_H.Name = "lbl_H";
+            this.lbl_H.Size = new System.Drawing.Size(33, 19);
+            this.lbl_H.TabIndex = 94;
+            this.lbl_H.Text = "360";
+            // 
+            // lbl_Vl
+            // 
+            this.lbl_Vl.AutoSize = true;
+            this.lbl_Vl.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_Vl.Location = new System.Drawing.Point(347, 125);
+            this.lbl_Vl.Name = "lbl_Vl";
+            this.lbl_Vl.Size = new System.Drawing.Size(17, 19);
+            this.lbl_Vl.TabIndex = 93;
+            this.lbl_Vl.Text = "0";
+            // 
+            // lbl_Sl
+            // 
+            this.lbl_Sl.AutoSize = true;
+            this.lbl_Sl.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_Sl.Location = new System.Drawing.Point(347, 72);
+            this.lbl_Sl.Name = "lbl_Sl";
+            this.lbl_Sl.Size = new System.Drawing.Size(17, 19);
+            this.lbl_Sl.TabIndex = 92;
+            this.lbl_Sl.Text = "0";
+            // 
+            // lbl_Hl
+            // 
+            this.lbl_Hl.AutoSize = true;
+            this.lbl_Hl.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.lbl_Hl.Location = new System.Drawing.Point(347, 20);
+            this.lbl_Hl.Name = "lbl_Hl";
+            this.lbl_Hl.Size = new System.Drawing.Size(17, 19);
+            this.lbl_Hl.TabIndex = 91;
+            this.lbl_Hl.Text = "0";
             // 
             // button_SetHSV
             // 
@@ -860,6 +940,58 @@
             this.trackBar_H.Scroll += new System.EventHandler(this.trackBar_H_Scroll);
             this.trackBar_H.ValueChanged += new System.EventHandler(this.trackBar_H_ValueChanged);
             // 
+            // button_PixNum
+            // 
+            this.button_PixNum.Location = new System.Drawing.Point(120, 18);
+            this.button_PixNum.Name = "button_PixNum";
+            this.button_PixNum.Size = new System.Drawing.Size(108, 23);
+            this.button_PixNum.TabIndex = 1;
+            this.button_PixNum.Text = "行/列像素数统计";
+            this.button_PixNum.UseVisualStyleBackColor = true;
+            this.button_PixNum.Click += new System.EventHandler(this.button_PixNum_Click);
+            // 
+            // cb_PixNum
+            // 
+            this.cb_PixNum.FormattingEnabled = true;
+            this.cb_PixNum.Items.AddRange(new object[] {
+            "X方向",
+            "Y方向"});
+            this.cb_PixNum.Location = new System.Drawing.Point(6, 20);
+            this.cb_PixNum.Name = "cb_PixNum";
+            this.cb_PixNum.Size = new System.Drawing.Size(53, 20);
+            this.cb_PixNum.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button_ContrastImage);
+            this.groupBox2.Location = new System.Drawing.Point(5, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(87, 47);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "反相";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tb_PixNum);
+            this.groupBox3.Controls.Add(this.cb_PixNum);
+            this.groupBox3.Controls.Add(this.button_PixNum);
+            this.groupBox3.Location = new System.Drawing.Point(98, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(234, 47);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "行/列像素数统计";
+            // 
+            // tb_PixNum
+            // 
+            this.tb_PixNum.Location = new System.Drawing.Point(65, 20);
+            this.tb_PixNum.Name = "tb_PixNum";
+            this.tb_PixNum.Size = new System.Drawing.Size(49, 21);
+            this.tb_PixNum.TabIndex = 3;
+            this.tb_PixNum.Text = "255";
+            this.tb_PixNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ImageInfoHandle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -871,13 +1003,13 @@
             this.Text = "ImageInfoHandle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImageInfoHandle_FormClosing);
             this.panel_Main.ResumeLayout(false);
-            this.tabControl_ImageInfoHandle.ResumeLayout(false);
+            this.tabControl_Main.ResumeLayout(false);
             this.tabPage_BrightAndContrast.ResumeLayout(false);
             this.tabPage_BrightAndContrast.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Contrast)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Bright)).EndInit();
-            this.tabPage_HSV.ResumeLayout(false);
-            this.tabPage_HSV.PerformLayout();
+            this.tabPage_HSL.ResumeLayout(false);
+            this.tabPage_HSL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Hue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Saturation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Lightness)).EndInit();
@@ -885,7 +1017,7 @@
             this.tabPage_Threshold.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Threshold)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Threshold)).EndInit();
-            this.tabPage_ContrastImage.ResumeLayout(false);
+            this.tabPage_Funcs.ResumeLayout(false);
             this.tabPage_ChannelCommingler.ResumeLayout(false);
             this.tabPage_ChannelCommingler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Const)).EndInit();
@@ -902,6 +1034,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_V)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_S)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_H)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -909,11 +1044,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_Main;
-        private System.Windows.Forms.TabControl tabControl_ImageInfoHandle;
+        private System.Windows.Forms.TabControl tabControl_Main;
         private System.Windows.Forms.TabPage tabPage_BrightAndContrast;
-        private System.Windows.Forms.TabPage tabPage_HSV;
+        private System.Windows.Forms.TabPage tabPage_HSL;
         private System.Windows.Forms.TabPage tabPage_Threshold;
-        private System.Windows.Forms.TabPage tabPage_ContrastImage;
+        private System.Windows.Forms.TabPage tabPage_Funcs;
         private System.Windows.Forms.TabPage tabPage_ChannelCommingler;
         private System.Windows.Forms.TrackBar trackBar_Bright;
         private System.Windows.Forms.TextBox textBox_Bright;
@@ -971,5 +1106,16 @@
         private System.Windows.Forms.TrackBar trackBar_Lightness;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Threshold;
         private System.Windows.Forms.CheckBox checkBox_SingleColor;
+        private System.Windows.Forms.Label lbl_V;
+        private System.Windows.Forms.Label lbl_S;
+        private System.Windows.Forms.Label lbl_H;
+        private System.Windows.Forms.Label lbl_Vl;
+        private System.Windows.Forms.Label lbl_Sl;
+        private System.Windows.Forms.Label lbl_Hl;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox tb_PixNum;
+        private System.Windows.Forms.ComboBox cb_PixNum;
+        private System.Windows.Forms.Button button_PixNum;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
