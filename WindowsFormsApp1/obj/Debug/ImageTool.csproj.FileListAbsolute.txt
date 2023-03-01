@@ -35,17 +35,3 @@ E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.pdb
 E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.MoveButton.resources
 E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Controls.PageSwitch.resources
 E:\ImageTool\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Controls.UComboBox.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\bin\Debug\ImageTool.exe.config
-D:\programmer\C#\ImageTool\WindowsFormsApp1\bin\Debug\ImageTool.exe
-D:\programmer\C#\ImageTool\WindowsFormsApp1\bin\Debug\ImageTool.pdb
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.csprojAssemblyReference.cache
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Controls.PageSwitch.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Controls.UComboBox.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Image_Form.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.ImageInfoHandle.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.Properties.Resources.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.MoveButton.resources
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.csproj.GenerateResource.cache
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.csproj.CoreCompileInputs.cache
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.exe
-D:\programmer\C#\ImageTool\WindowsFormsApp1\obj\Debug\ImageTool.pdb

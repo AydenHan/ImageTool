@@ -1084,7 +1084,8 @@ namespace ImageTool
                 int curIndex = cb_BackUp.SelectedIndex;
                 for (int i = outputImage.Count - 1; i > curIndex; i--) {
                     outputImage.Remove(i);
-                    cb_BackUp.Items.RemoveAt(i);
+                    if (cb_BackUp.Items.Count > i)
+                        cb_BackUp.Items.RemoveAt(i);
                 }
                 stepTab.RemoveRange(curIndex + 1, stepTab.Count - curIndex - 1);
                 UpdateInputImage(1, outputImage[curIndex]);
